@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class QuestionRepository {
-    private List<Question> questions = new ArrayList<>();
+    private final List<Question> questions = new ArrayList<>();
 
     {
         Question question1 = new Question();
@@ -53,7 +53,7 @@ public class QuestionRepository {
         question7.setId(7);
         question7.setTextQuestion("Врать не хорошо. Поражение");
         question7.setTextAnswers(Arrays.asList("", ""));
-        question7.setNextQuestionId(Arrays.asList(-1, -1));;
+        question7.setNextQuestionId(Arrays.asList(-1, -1));
         question7.setLose(true);
 
         questions.add(question1);
@@ -68,7 +68,6 @@ public class QuestionRepository {
     }
 
     public Question getQuestionById(int id) {
-        --id;
-        return questions.get(id);
+        return questions.get(--id);
     }
 }

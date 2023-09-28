@@ -17,7 +17,7 @@ public class GameServlet extends HttpServlet {
     private QuestionService questionService;
 
     @Override
-    public void init() throws ServletException {
+    public void init() {
         questionService = new QuestionService(new QuestionRepository());
 
     }
@@ -29,8 +29,8 @@ public class GameServlet extends HttpServlet {
         if (reboot != null){
             if (reboot.equals("true")) {
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
-                requestDispatcher.forward(request, response);
                 session.invalidate(); // надо ли...
+                requestDispatcher.forward(request, response);
                 return;
             }
         }
@@ -55,7 +55,6 @@ public class GameServlet extends HttpServlet {
 
         session.setAttribute("username", username);
         session.setAttribute("sessionId", request.getRequestedSessionId());
-        System.out.println(username);
         request.setAttribute("question", questionService.getQuestionById(1));
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/game.jsp");

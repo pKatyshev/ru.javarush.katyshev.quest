@@ -29,7 +29,7 @@ public class GameServlet extends HttpServlet {
         if (reboot != null){
             if (reboot.equals("true")) {
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
-                session.invalidate(); // надо ли...
+                session.invalidate();
                 requestDispatcher.forward(request, response);
                 return;
             }
@@ -39,7 +39,7 @@ public class GameServlet extends HttpServlet {
 
         request.setAttribute("question", questionService.getQuestionById(answerId));
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/game.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("game.jsp");
         requestDispatcher.forward(request, response);
     }
 
@@ -50,14 +50,14 @@ public class GameServlet extends HttpServlet {
 
         String username = request.getParameter("username-from-form");
         if (StringUtils.isBlank(username)) {
-            username = "Стесняшка^^";
+            username = "Аноним";
         }
 
         session.setAttribute("username", username);
         session.setAttribute("sessionId", request.getRequestedSessionId());
         request.setAttribute("question", questionService.getQuestionById(1));
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/game.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("game.jsp");
         requestDispatcher.forward(request, response);
     }
 }

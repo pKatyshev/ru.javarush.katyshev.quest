@@ -1,6 +1,6 @@
-package ru.javarush.katyshev.quest.repositories;
+package ru.javarush.katyshev.quest.repository;
 
-import ru.javarush.katyshev.quest.entities.Question;
+import ru.javarush.katyshev.quest.entity.Question;
 
 import java.util.ArrayList;
 import java.util.Arrays;

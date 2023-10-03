@@ -8,7 +8,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.*;
 import jakarta.servlet.http.*;
 import org.apache.commons.lang3.StringUtils;
-import ru.javarush.katyshev.quest.repositories.QuestionRepository;
+import ru.javarush.katyshev.quest.repository.QuestionRepository;
 import ru.javarush.katyshev.quest.services.QuestionService;
 
 

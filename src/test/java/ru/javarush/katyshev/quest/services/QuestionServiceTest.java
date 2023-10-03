@@ -3,8 +3,7 @@ package ru.javarush.katyshev.quest.services;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import ru.javarush.katyshev.quest.entities.Question;
-import ru.javarush.katyshev.quest.repositories.QuestionRepository;
+import ru.javarush.katyshev.quest.repository.QuestionRepository;
 
 class QuestionServiceTest {
     private QuestionService questionService;

@@ -1,7 +1,7 @@
 package ru.javarush.katyshev.quest.services;
 
-import ru.javarush.katyshev.quest.entities.Question;
-import ru.javarush.katyshev.quest.repositories.QuestionRepository;
+import ru.javarush.katyshev.quest.entity.Question;
+import ru.javarush.katyshev.quest.repository.QuestionRepository;
 
 public class QuestionService {
 

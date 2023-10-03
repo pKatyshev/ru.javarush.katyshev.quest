@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import ru.javarush.katyshev.quest.entities.Question;
+import ru.javarush.katyshev.quest.entity.Question;
+import ru.javarush.katyshev.quest.repository.QuestionRepository;
 import ru.javarush.katyshev.quest.services.QuestionService;
 
 public class QuestionRepositoryTest {

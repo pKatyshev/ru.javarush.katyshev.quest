@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "textQuestion": "Ты потерял память. Принять вызов НЛО?",
+    "textAnswers": [
+      "Принять вызов",
+      "Отклонить вызов"
+    ],
+    "nextQuestionId": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": 2,
+    "textQuestion": "Ты принял вызов. Поднимешься на мостик к капитану?",
+    "textAnswers": [
+      "Подняться на мостик",
+      "Отказаться подниматься на мостик"
+    ],
+    "nextQuestionId": [
+      4,
+      5
+    ]
+  },
+  {
+    "id": 3,
+    "textQuestion": "Ты отклонил вызов. Поражение",
+    "textAnswers": [
+      "",
+      ""
+    ],
+    "nextQuestionId": [
+      -1,
+      -1
+    ],
+    "lose": true
+  },
+  {
+    "id": 4,
+    "textQuestion": "Ты поднялся на мостик. Ты кто?",
+    "textAnswers": [
+      "Рассказвть правду о себе",
+      "Солгать"
+    ],
+    "nextQuestionId": [
+      6,
+      7
+    ]
+  },
+  {
+    "id": 5,
+    "textQuestion": "Ты не пошел на переговоры. Поражение",
+    "textAnswers": [
+      "",
+      ""
+    ],
+    "nextQuestionId": [
+      -1,
+      -1
+    ],
+    "lose": true
+  },
+  {
+    "id": 6,
+    "textQuestion": "Тебя вернули домой! Победа!",
+    "textAnswers": [
+      "",
+      ""
+    ],
+    "nextQuestionId": [
+      -1,
+      -1
+    ],
+    "win": true
+  },
+  {
+    "id": 7,
+    "textQuestion": "Врать не хорошо. Поражение",
+    "textAnswers": [
+      "",
+      ""
+    ],
+    "nextQuestionId": [
+      -1,
+      -1
+    ],
+    "lose": true
+  }
+]

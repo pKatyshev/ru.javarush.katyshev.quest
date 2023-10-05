@@ -9,7 +9,7 @@ import jakarta.servlet.annotation.*;
 import jakarta.servlet.http.*;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import ru.javarush.katyshev.quest.repository.QuestionRepository;
+import ru.javarush.katyshev.quest.repository.QuestionRepositoryImpl;
 import ru.javarush.katyshev.quest.services.QuestionService;
 
 @Slf4j(topic = "GameServlet")
@@ -19,7 +19,7 @@ public class GameServlet extends HttpServlet {
 
     @Override
     public void init() {
-        questionService = new QuestionService(new QuestionRepository());
+        questionService = new QuestionService(new QuestionRepositoryImpl());
 
     }
 

@@ -19,6 +19,9 @@
           <element id="library" level="project" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:3.0.0" />
           <element id="library" level="project" name="Maven: com.sun.activation:jakarta.activation:2.0.0" />
           <element id="library" level="project" name="Maven: org.glassfish.web:jakarta.servlet.jsp.jstl:2.0.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.15.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.15.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.15.1" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.13.0" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.4.11" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.4.11" />

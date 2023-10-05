@@ -1,13 +1,13 @@
 package ru.javarush.katyshev.quest.services;
 
 import ru.javarush.katyshev.quest.entity.Question;
-import ru.javarush.katyshev.quest.repository.QuestionRepository;
+import ru.javarush.katyshev.quest.repository.QustionRepository;
 
 public class QuestionService {
 
-    private QuestionRepository questionRepository;
+    private final QustionRepository questionRepository;
 
-    public QuestionService(QuestionRepository questionRepository) {
+    public QuestionService(QustionRepository questionRepository) {
         this.questionRepository = questionRepository;
     }
 

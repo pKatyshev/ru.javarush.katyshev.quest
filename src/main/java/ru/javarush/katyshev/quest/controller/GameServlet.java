@@ -7,11 +7,12 @@ import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.*;
 import jakarta.servlet.http.*;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import ru.javarush.katyshev.quest.repository.QuestionRepository;
 import ru.javarush.katyshev.quest.services.QuestionService;
 
-
+@Slf4j(topic = "GameServlet")
 @WebServlet(name = "gameServlet", urlPatterns = "/game-servlet")
 public class GameServlet extends HttpServlet {
     private QuestionService questionService;
@@ -31,6 +32,7 @@ public class GameServlet extends HttpServlet {
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
                 session.invalidate();
                 requestDispatcher.forward(request, response);
+                log.debug("session is invalidated");
                 return;
             }
         }
@@ -56,6 +58,8 @@ public class GameServlet extends HttpServlet {
         session.setAttribute("username", username);
         session.setAttribute("sessionId", request.getRequestedSessionId());
         request.setAttribute("question", questionService.getQuestionById(1));
+
+        log.debug("user: " + username + " starts the game");
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("game.jsp");
         requestDispatcher.forward(request, response);

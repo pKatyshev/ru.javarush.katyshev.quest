@@ -50,6 +50,13 @@
             <scope>provided</scope>
         </dependency>
 
+<!--        LOGGER-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.4.11</version>
+        </dependency>
+
 <!--        TESTS-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>

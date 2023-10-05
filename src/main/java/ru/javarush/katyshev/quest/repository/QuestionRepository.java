@@ -1,11 +1,13 @@
 package ru.javarush.katyshev.quest.repository;
 
+import lombok.extern.slf4j.Slf4j;
 import ru.javarush.katyshev.quest.entity.Question;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@Slf4j(topic = "QuestionRepository")
 public class QuestionRepository {
     private final List<Question> questions = new ArrayList<>();
 
@@ -64,7 +66,7 @@ public class QuestionRepository {
         questions.add(question6);
         questions.add(question7);
 
-        System.out.println("repository has been initialised");
+        log.info("repository has been initialised");
     }
 
     public Question getQuestionById(int id) {

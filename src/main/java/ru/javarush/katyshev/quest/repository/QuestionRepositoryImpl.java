@@ -7,6 +7,7 @@ import ru.javarush.katyshev.quest.entity.Question;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.List;
 
 @Slf4j(topic = "QuestionRepository")
@@ -15,7 +16,8 @@ public class QuestionRepositoryImpl implements QustionRepository {
 
     public QuestionRepositoryImpl() {
         ObjectMapper mapper = new ObjectMapper();
-        File file = new File("M:\\IDEA_proj\\ru.javarush.katyshev.quest\\src\\main\\resources\\question.json");
+        URL resource = getClass().getClassLoader().getResource("question.json");
+        File file = new File(resource.getFile());
 
         try {
             questions = mapper.readValue(file, new TypeReference<>() {});
